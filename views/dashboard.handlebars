@@ -1,0 +1,29 @@
+{{!-- show previous blogs by current user --}}
+
+{{!-- form to submit a new post --}}
+<div class="">
+  <h2>
+    Submit a Blog Post
+  </h2>
+  <form class="">
+    <label for="blog_title">
+      Blog Title
+    </label>
+    <br />
+    <textarea id="blog_title" name="blog_title" rows="2" cols="30">
+      {{blog_title}}
+    </textarea>
+    <br />
+    <label for="description">
+      Description:
+    </label>
+    <br />
+    <textarea id="description" name="description" rows="5" cols="30">
+      {{description}}
+    </textarea>
+    <br />
+    <button type="submit" value="Submit">
+      Submit
+    </button>
+  </form>
+

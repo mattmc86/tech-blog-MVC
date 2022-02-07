@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public/')));
 
-app.use(require('./controllers/blogs-routes'));
+app.use(require('./controllers/api/blogs-routes')); // maybe dont need blogs-routes at the end
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
