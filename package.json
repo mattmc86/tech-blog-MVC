@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "seed": "node seeds/index.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,9 @@
     "express-handlebars": "^3.1.0",
     "handlebars": "^4.7.3",
     "mysql2": "^2.1.0",
-    "sequelize": "^5.21.5"
+    "sequelize": "^5.21.5",
+    "express-session": "^1.17.1",
+    "bcrypt": "^5.0.0"
   },
   "homepage": "https://github.com/mattmc86/tech-blog-MVC#readme"
 
