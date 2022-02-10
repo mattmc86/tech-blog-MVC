@@ -1,7 +1,7 @@
 const router = require('express').Router();
 //const { User } = require('../../../models');
 
-// Logout
+
 router.post('/logout', (req, res) => {
     if (req.session.loggedIn) {
       req.session.destroy(() => {

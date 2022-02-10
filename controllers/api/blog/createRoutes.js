@@ -3,29 +3,19 @@ const sequelize = require('../../../config/connection');
 const Blogs = require('../../../models/Blog');
 
 
-router.get('/', async (req, res) => {
+router.post("/addBlog", async (req, res) => {
   try {
-    const dbBlogData = await Blogs.findAll();
-
-    const blogs = dbBlogData.map((blog) =>
-      blog.get({ plain: true })
-    );
-    res.render('homepage', {
-      blogs,
-      loggedIn: req.session.loggedIn,
+    const dbUserData = await Blogs.create({
+      blog_title: req.body.blog_title,
+      blog_content: req.body.description,
+      user_id: req.session.user_id,
     });
+    res.status(200).json(dbUserData);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
 
-router.get('/login', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
-  }
-  res.render('login');
-});
 
 module.exports = router;
