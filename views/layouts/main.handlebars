@@ -9,33 +9,26 @@
   <body>
     <header>
       <nav class = 'navbar is-warning' role="navigation" aria-label="main navigation">
-        <div class = 'navbar-brand'>
-           {{!-- <a class="navbar-item" href="https://github.com/mattmc86">
-      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-    </a> --}}
-
+        <div class = 'navbar-brand'> 
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </a>
   </div>
-
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
 
       <a class="navbar-item" href='/'>
         Home
-      </a>
-       
-      
+      </a>   
          {{#if loggedIn}}
           <a class="navbar-item" href="/dashboard">Dashboard</a>
           <div class="navbar-end">
           <div class="navbar-item">
           <div class="buttons">
           <button class="logout navbar-item button is-primary">Logout</button>
-          {{!-- <button class="logout">LOGOUT</button> --}}
+        
         {{else}}
           <div class="navbar-end">
       <div class="navbar-item">
@@ -49,37 +42,11 @@
         </div>
       </div>
     </div>
-          {{!-- <a href="/login">Login</a>
-          <a href="/signup">Sign up</a> --}}
+         
         {{/if}}
     </div>
-
-    {{!-- <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light">
-            Log in
-          </a>
-        </div>
-      </div>
-    </div> --}}
   </div>
-</nav>
-
-        {{!-- </div>
-        <a href="/">HOME</a>
-        {{#if loggedIn}}
-          <a href="/dashboard">DASHBOARD</a>
-          <button class="logout">LOGOUT</button>
-        {{else}}
-          <a href="/login">LOGIN</a>
-          <a href="/signup">SIGNUP</a>
-        {{/if}}
-      </nav> --}}
-     
+</nav> 
       <br>
       <br>
     </header>
