@@ -1,17 +1,40 @@
-{{!-- new user sign up --}}
-<h2>
-    Create an account
-</h2>
-<form>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Enter your email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-   
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Choose a Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-  </div>
-  
-  <button type="submit" class="btn btn-primary">Create Account</button>
-</form>
+<div class="form-container">
+  <section class="form-header">
+    <div class="form-title">Sign Up</div>
+  </section>
+  <section class="form-body">
+    <form id="signup-form">
+      {{!-- <input
+        type="text"
+        class="form-username"
+        id="username-signup"
+        placeholder="Choose a username"
+      /> --}}
+         <div class="field">
+      <label class="label">Username</label>
+      <div class="control">
+      <input type = 'text' class="form-username input" id="username-signup" placeholder="Choose a username">
+     </div>
+    </div>
+    <br>
+       <div class="field">
+      <label class="label">Password</label>
+      <div class="control">
+      <input type = 'text' class="form-password input" id="password-signup" placeholder="Choose a password">
+     </div>
+    </div>
+
+
+      {{!-- <input
+        type="text"
+        class="form-password"
+        id="password-signup"
+        placeholder="Choose a password"
+      /> --}}
+      <input type="submit" value="Sign Up" />
+      <br />
+    </form>
+  </section>
+</div>
+
+<script src="/js/signup.js"></script>

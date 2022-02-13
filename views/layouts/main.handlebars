@@ -1,51 +1,91 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>Tech Blog</title>
-     <link rel="stylesheet" href="/css/style.css">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-</head>
-<body>
-    <h1>Tech Blog</h1>
-   
-      <header>
-       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        {{#if loggedIn}}
-        <li class="nav-item">
-          <a class="nav-link" href="#">Dashboard</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Logout</a>
-        </li>
+  </head>
+  <body>
+    <header>
+      <nav class = 'navbar is-warning' role="navigation" aria-label="main navigation">
+        <div class = 'navbar-brand'>
+           {{!-- <a class="navbar-item" href="https://github.com/mattmc86">
+      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+    </a> --}}
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+
+      <a class="navbar-item" href='/'>
+        Home
+      </a>
+       
+      
+         {{#if loggedIn}}
+          <a class="navbar-item" href="/dashboard">Dashboard</a>
+          <div class="navbar-end">
+          <div class="navbar-item">
+          <div class="buttons">
+          <button class="logout navbar-item button is-primary">Logout</button>
+          {{!-- <button class="logout">LOGOUT</button> --}}
         {{else}}
-        <li class="nav-item">
-          <a class="nav-link" href="#">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Sign up</a>
-        </li>
-        {{/if}}
-      </ul>
+          <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a href="/signup" class="button is-primary">
+            <strong>Sign up</strong>
+          </a>
+          <a href="/login"class="button is-light">
+            Log in
+          </a>
+        </div>
+      </div>
     </div>
+          {{!-- <a href="/login">Login</a>
+          <a href="/signup">Sign up</a> --}}
+        {{/if}}
+    </div>
+
+    {{!-- <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light">
+            Log in
+          </a>
+        </div>
+      </div>
+    </div> --}}
   </div>
 </nav>
-</header>
-<main>
- {{{body}}}
-</main>
-    
-</body>
+
+        {{!-- </div>
+        <a href="/">HOME</a>
+        {{#if loggedIn}}
+          <a href="/dashboard">DASHBOARD</a>
+          <button class="logout">LOGOUT</button>
+        {{else}}
+          <a href="/login">LOGIN</a>
+          <a href="/signup">SIGNUP</a>
+        {{/if}}
+      </nav> --}}
+     
+      <br>
+      <br>
+    </header>
+    <main>
+      {{{body}}}
+    </main>
+    <script src="/js/logout.js"></script>
+  </body>
 </html>

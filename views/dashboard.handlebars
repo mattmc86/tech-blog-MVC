@@ -1,15 +1,24 @@
-{{!-- This is to display all blogs by current user --}}
-
 <div class="blogs">
+  <p class="dashboard-content">Your posts</p>
+  <br>
   <ul>
     {{#each blogs}}
-      <li>
-        <div class="dashboard-blog">
-          <div class="blog-title">{{this.blog_title}}</div>
-          <div class="blog-date">date tbc helper</div>
-        </div>
-      </li>
+      <a href="/edit-blog/{{id}}">
+        <li>
+          <div class="dashboard-blog">
+             <div class="card">
+               <div class="blog-title title is-4">{{this.blog_title}}</div>
+              <div class="blog-date">{{format_date created_at}}</div>
+
+             </div>
+            
+          </div>
+        </li>
+      </a>
+      <br>
     {{/each}}
   </ul>
-  <button class="add-btn">Add new post</button>
+  <a href="/add-blog">
+    <button class="add-btn">Add a new post</button>
+  </a>
 </div>

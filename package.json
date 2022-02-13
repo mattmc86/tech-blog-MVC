@@ -18,12 +18,12 @@
     "url": "https://github.com/mattmc86/tech-blog-MVC/issues"
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
+    "dotenv": "^16.0.0",
     "express": "^4.17.1",
-    "express-handlebars": "^3.1.0",
+    "express-handlebars": "^6.0.2",
     "handlebars": "^4.7.3",
-    "mysql2": "^2.1.0",
-    "sequelize": "^5.21.5",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.15.0",
     "express-session": "^1.17.1",
     "connect-session-sequelize": "^7.1.2",
     "bcrypt": "^5.0.0"

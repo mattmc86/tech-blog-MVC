@@ -1,0 +1,61 @@
+<div class="blogs">
+ <h1>Blog Feed</h1>
+ <br>
+
+  <ul>
+    {{#each blogs}}
+      <li>
+        <div class="blog-container">
+          <section class="blog-header">
+            <div class="card">
+
+            <div class="card-content">        
+            <a href="/blog/{{id}}">
+              <div class="title is-4 blog-title">{{this.blog_title}}</div>
+            </a>
+            <div class="subtitle is-6 blog-info">Posted by
+              {{user.username}}
+              on
+              {{format_date created_at}}</div>
+          </section>
+          {{!-- <section class="blog-content">
+            {{this.blog_content}}
+           
+          </section> --}}
+           </div>
+            </div>
+          <a href="/blog/{{id}}" class="view-blog">Add a comment</a>
+          <a
+            href="/blog/{{id}}"
+            class="blog-comments-amount"
+          >{{comments.length}}
+            comments</a>
+        </div>
+      </li>
+      </div>
+    </div>
+      <br>
+    {{/each}}
+  </ul>
+</div>
+
+{{!-- <div class="card">
+
+  <div class="card-content">
+   
+    
+      <div class="media-content">
+        <p class="title is-4">John Smith</p>
+        <p class="subtitle is-6">@johnsmith</p>
+      </div>
+   
+
+    <div class="content">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+      <a href="#">#css</a> <a href="#">#responsive</a>
+      <br>
+      <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+    </div>
+  </div>
+</div> --}}
