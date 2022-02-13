@@ -6,7 +6,7 @@
    A full stack application to allow users to post blogs and comment on other users blogs. Built with express, handlerbars, mySQL2, sequelize. Styled with Bulma. 
    Deployed application: https://tech-blog-matt.herokuapp.com/
 
-   ![Screenshot](Screenshot.png)
+   ![Screenshot](screenshot.png)
    
   ## Table of Contents
   * [Installation](#installation)
